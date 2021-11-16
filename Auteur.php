@@ -26,9 +26,9 @@
 
         // Les methodes ---------------------------------------------
         public function ajouterAuteur($connexion){
-            $req=$connexion->prepare('INSERT INTO auteurs (nom, prenom, descript) VALUES (:id1, :id2, :id3)');
+            $req=$connexion->prepare('INSERT INTO auteurs (nom, prenom, descript) VALUES (:idi, :id2, :id3)');
             $req->execute([
-                "id1" => $this->nom,
+                "idi" => $this->nom,
                 "id2" => $this->prennom,
                 "id3" => $this->descript
             ]);
