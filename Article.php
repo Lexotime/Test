@@ -38,10 +38,10 @@
 
         // Les methodes ---------------------------------------------
         public function ajouterArticle($connexion){
-            $req=$connexion->prepare('INSERT INTO articles (titre, img, cat_id, publication, contenu,auteur_id) VALUES (:id1, :id2, :id3, :id4, :id5, :id6)');
+            $req=$connexion->prepare('INSERT INTO articles (titre, img, cat_id, publication, contenu,auteur_id) VALUES (:id1, :idz, :id3, :id4, :id5, :id6)');
             $req->execute([
                 "id1" => $this->titre,
-                "id2" => $this->img,
+                "idz" => $this->img,
                 "id3" => $this->cat_id,
                 "id4" => $this->publication,
                 "id5" => $this->contenu,
