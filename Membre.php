@@ -46,10 +46,10 @@
 
         // Les methodes ---------------------------------------------
         public function ajouterMembre($connexion){
-            $req=$connexion->prepare('INSERT INTO membres (nom, prenom, nationalite, descript, linkdin, twitter, citation, photo) VALUES (:id1, :id2, :id3, :id4, :id5, :id6, :id7, :id8)');
+            $req=$connexion->prepare('INSERT INTO membres (nom, prenom, nationalite, descript, linkdin, twitter, citation, photo) VALUES (:id1, :idz, :id3, :id4, :id5, :id6, :id7, :id8)');
             $req->execute([
                 "id1" => $this->nom,
-                "id2" => $this->prenom,
+                "idz" => $this->prenom,
                 "id3" => $this->nationalite,
                 "id4" => $this->descript,
                 "id5" => $this->linkdin,
